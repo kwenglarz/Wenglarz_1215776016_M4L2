@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Edit Student</title>
+ </head>
+
+ <body> <%- include('./partials/navbar') %>
+  <h1>Edit Student</h1>
+
+  <form action="/api/v1/students/edit" method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name">
+
+    <br>
+   
+    <label for="age">Age:</label><br> 
+    <input type="text" id="age" name="age">
+    
+    <br> 
+
+    <label for="email">Email:</label><br> 
+    <input type="text" id="email" name="email">
+
+    <br>
+
+    <label for="course">Course:</label><br> 
+    <input type="text" id="course" name="course">
+
+    <br>
+
+    <label for="grade">Grade:</label><br> 
+    <input type="text" id="grade" name="grade">
+
+    <br>
+    <br>
+
+    <input type="submit" value="Submit">
+
+    <br>
+
+    <% if(typeof message != 'undefined') { %>
+        <p>Message: <%= message %></p>
+    <% }; %>
+    <br>
+    <br>
+  </form> <a href="/api/v1/students/">Go Back to Home Page</a>
+ </body>
+</html>
